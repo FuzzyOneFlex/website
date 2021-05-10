@@ -31,8 +31,8 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   padding: 96px 0;
-  margin: 32px 0;
   overflow: hidden;
+  width: 100%;
   @media (max-width: ${props => props.theme.screen.md}) {
     padding: 96px 0;
   }
@@ -43,16 +43,22 @@ export const Section = styled.section`
     props.accent &&
     `background-color: ${
       props.accent === 'secondary'
-        ? props.theme.color.white.dark
+        ? props.theme.color.black.pitch
         : props.theme.color.primary
+    }`};
+
+  ${props =>
+    props.accent &&
+    `color: ${
+      props.accent === 'secondary'
+        ? props.theme.color.primary
+        : props.theme.color.white.regular
     }`};
 `;
 
-export const Section2 = styled.section`
-  padding: 96px 0;
-  margin: 32px 0;
-  overflow: hidden;
-  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+
+export const Section2 = styled.section` 
+ overflow: hidden;
   @media (max-width: ${props => props.theme.screen.md}) {
     padding: 96px 0;
   }
@@ -63,9 +69,17 @@ export const Section2 = styled.section`
     props.accent &&
     `background-color: ${
       props.accent === 'secondary'
-        ? props.theme.color.white.dark
+        ? props.theme.color.black.pitch
         : props.theme.color.primary
+    }`};
+
+  ${props =>
+    props.accent &&
+    `color: ${
+      props.accent === 'secondary'
+        ? props.theme.color.primary
+        : props.theme.color.white.regular
     }`};
 `;
 
-// background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+

@@ -12,6 +12,7 @@ import TwitterIcon from '@static/icons/twitter.svg';
 import RedditIcon from '@static/icons/reddit.svg';
 import TelegramIcon from '@static/icons/telegram.svg';
 import LinkedinIcon from '@static/icons/linkedin.svg';
+import { Section2 } from '@components/global';
 
 const SOCIAL = [
   {
@@ -48,7 +49,7 @@ const Footer = () => (
       query {
         art_pot: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
+          name: { eq: "fuz" }
         ) {
           childImageSharp {
             fluid(maxWidth: 960) {
@@ -59,6 +60,7 @@ const Footer = () => (
       }
     `}
     render={data => (
+      <Section2 id="footer" accent="secondary">
       <React.Fragment>
         <Art>
           <Img
@@ -69,9 +71,7 @@ const Footer = () => (
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <span>
-                Powered by Gatsby.
-              </span>
+                COPYRIGHT © FUZZY.ONE 2021 ALL RIGHTS RESERVED.
             </Copyright>
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
@@ -83,6 +83,7 @@ const Footer = () => (
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
+      </Section2>
     )}
   />
 );
@@ -92,8 +93,8 @@ const SocialIcons = styled.div`
 
   img {
     margin: 0 8px;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
@@ -102,13 +103,17 @@ const SocialIcons = styled.div`
 `;
 
 const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.primary};
-  padding: 32px 0;
+  // background-color: ${props => props.theme.color.primary};
+  // padding: 32px 0;
+  padding-top: 120px;
+  // padding-bottom: 1px;
+  background-image: url("./wave.svg") ;
+  background-size: auto;
 `;
 
 const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
+  font-family: ${props => props.theme.font.primary};
+  ${props => props.theme.font_size.smaller};
   color: ${props => props.theme.color.black.regular};
 
   a {
@@ -128,7 +133,7 @@ const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  padding-bottom: 30px;
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;
     text-align: center;

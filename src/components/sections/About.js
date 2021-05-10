@@ -4,17 +4,18 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
-
+import { AnimationWrapper } from 'react-hover-animation'
 const About = () => (
   <StaticQuery
     query={graphql`
       query {
         art_fast: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+          name: { eq: "qa_grey" }
+
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth:  700, maxHeight: 700) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -22,10 +23,10 @@ const About = () => (
 
         art_learn: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
+          name: { eq: "solution_grey" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 700, maxHeight: 700) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -33,10 +34,10 @@ const About = () => (
 
         art_ideas: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "mall_grey" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 700, maxHeight: 700) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -44,12 +45,12 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="about">
+      <Section id="about" accent="secondary">
         <Container>
           <Grid>
             <div>
-              <h2>Q&A Platform</h2>
-              <p>
+             <AnimationWrapper><h2>Q&A Platform</h2></AnimationWrapper>
+              <p style={{color:"white"}}>
                 A free open-to-all platform for expert reviewed answered to situation specific/customized questions.
               </p>
             </div>
@@ -62,20 +63,18 @@ const About = () => (
               <Img fluid={data.art_learn.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>Solution Repository</h2>
-              <p>
+              <AnimationWrapper><h2>Solution Repository</h2></AnimationWrapper>
+              <p style={{color:"white"}}>
                 A global solution repository comprised of informative and knowledge-oriented articles writte by SC veterans and experts.
               </p>
             </div>
           </Grid>
           <Grid>
             <div>
-              <h2>Fuzzy Mall</h2>
-              <p>
+              <AnimationWrapper><h2>Fuzzy Mall</h2></AnimationWrapper>
+              <p style={{color:"white"}}>
                 Global online marketplace for Supply chain companies & service providers to connect and execute smooth trade with each other.
                 <br />
-                <br />
-                Gatsby is fast in every way that matters.
               </p>
             </div>
             <Art>
@@ -129,7 +128,7 @@ const Grid = styled.div`
 
 const Art = styled.figure`
   margin: 0;
-  max-width: 380px;
+  max-width: 220px;
   width: 100%;
 `;
 

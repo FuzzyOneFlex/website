@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
-
+import { AnimationWrapper } from 'react-hover-animation'
 const Header = () => (
   <StaticQuery
     query={graphql`
@@ -30,9 +30,13 @@ const Header = () => (
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
             <Text>
-              <h1> A community-based platform for interactive knowledge-based supply chain solutions
-               
-              </h1>
+              <h2><HoverText> Fuzzy.One</HoverText>, a supply chain
+               information platform using Return on Knowledge.</h2>
+             <br />
+             <h3>We pay you for answering questions. 
+              <br />
+              The faster you answer, the more you earn.
+              </h3>
               <br />
               <p>
                 <StyledExternalLink href="https://github.com/FuzzyOneFlex">
@@ -86,43 +90,12 @@ const Grid = styled.div`
   }
 `;
 
-const wave = styled.div`
-.wave{
-  background:
-    linear-gradient(to right, sandybrown, chocolate);
-  height: 50px;
-  position: relative;
-}
-.wave::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat;
-  height: 10px;
-  background-size: 20px 20px;
-  background-image:
-    radial-gradient(circle at 10px -5px, transparent 12px, aquamarine 13px);
-}
-.wave::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat;
-  height: 15px;
-  background-size: 40px 20px;
-  background-image:
-    radial-gradient(circle at 10px 15px, aquamarine 12px, transparent 13px);
-}
-`;
+
 
 const Text = styled.div`
   justify-self: center;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.lg}) {
     justify-self: start;
   }
 `;
@@ -135,5 +108,11 @@ const StyledExternalLink = styled(ExternalLink)`
     color: ${props => props.theme.color.black.regular};
   }
 `;
+
+const HoverText = styled.span`
+  &:hover {
+    color: ${props => props.theme.color.white.regular};
+  }
+`
 
 export default Header;

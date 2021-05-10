@@ -1,9 +1,10 @@
 const theme = {
   font: {
-    primary: `'Montserrat'`,
-    secondary: `'Montserrat'`,
+    primary: `sans-serif`,
+    secondary: `'sans-serif'`,
   },
   font_size: {
+    smaller: 'font-size: 15px; line-height: 24px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
     large: 'font-size: 30px; line-height: 40px',
@@ -11,15 +12,20 @@ const theme = {
     xlarge: 'font-size: 48px; line-height: 56px',
   },
   color: {
+
     white: {
       regular: '#FFFFFF',
       dark: '#F6F6F6',
     },
+
     black: {
+
       lighter: '#ABA8AF',
       light: '#564F62',
       regular: '#211E26',
+      pitch: "#141414"
     },
+
     primary: '#55C645',
   },
   screen: {

@@ -15,7 +15,10 @@ export const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+
 `;
+
 
 export const NavListWrapper = styled.div`
   ul {
@@ -41,18 +44,18 @@ export const NavListWrapper = styled.div`
 
 export const NavItem = styled.li`
   margin: 0 0.75em;
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
+  font-family: ${props => props.theme.font.primary};
+  ${props => props.theme.font_size.regular};
 
   a {
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.8;
     color: ${props => props.theme.color.black.regular};
   }
 
   &.active {
     a {
-      opacity: 1;
+      color: ${props => props.theme.color.white.regular};
     }
   }
 `;

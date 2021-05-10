@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/home/elxouitor/Desktop/site/node_modules/@reach/router/index.js"), require("fs"), require("/home/elxouitor/Desktop/site/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/home/elxouitor/Desktop/website/node_modules/@reach/router/index.js"), require("fs"), require("/home/elxouitor/Desktop/website/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/home/elxouitor/Desktop/site/node_modules/@reach/router/index.js", "fs", "/home/elxouitor/Desktop/site/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/home/elxouitor/Desktop/website/node_modules/@reach/router/index.js", "fs", "/home/elxouitor/Desktop/website/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/home/elxouitor/Desktop/site/node_modules/@reach/router/index.js"), require("fs"), require("/home/elxouitor/Desktop/site/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/home/elxouitor/Desktop/website/node_modules/@reach/router/index.js"), require("fs"), require("/home/elxouitor/Desktop/website/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/home/elxouitor/Desktop/site/node_modules/@reach/router/index.js"], root["fs"], root["/home/elxouitor/Desktop/site/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/home/elxouitor/Desktop/website/node_modules/@reach/router/index.js"], root["fs"], root["/home/elxouitor/Desktop/website/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -129,13 +129,13 @@ var plugins = [{
     "background_color": "#8bd8ed",
     "theme_color": "#8bd8ed",
     "display": "minimal-ui",
-    "icon": "static/favicon.svg",
+    "icon": "static/fuz.svg",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "0ed3b0bd00cc7c1a1f9fda808e6a813e"
+    "cacheDigest": "a29f93067331c95a19ec017bc6d26e58"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr */ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js"),
@@ -34128,9 +34128,9 @@ if ( true && typeof window !== 'undefined' && typeof navigator !== 'undefined' &
 /***/ }),
 
 /***/ "@reach/router":
-/*!***********************************************************************************!*\
-  !*** external "/home/elxouitor/Desktop/site/node_modules/@reach/router/index.js" ***!
-  \***********************************************************************************/
+/*!**************************************************************************************!*\
+  !*** external "/home/elxouitor/Desktop/website/node_modules/@reach/router/index.js" ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -34150,9 +34150,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!****************************************************************************!*\
-  !*** external "/home/elxouitor/Desktop/site/node_modules/lodash/merge.js" ***!
-  \****************************************************************************/
+/*!*******************************************************************************!*\
+  !*** external "/home/elxouitor/Desktop/website/node_modules/lodash/merge.js" ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
