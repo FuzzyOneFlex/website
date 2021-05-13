@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: `sans-serif`,
-    secondary: `'sans-serif'`,
+    primary: `'Montserrat', sans-serif;`,
+    secondary: `'Montserrat', sans-serif;`,
   },
   font_size: {
     smaller: 'font-size: 15px; line-height: 24px',
@@ -26,7 +26,7 @@ const theme = {
       pitch: "#141414"
     },
 
-    primary: '#55C645',
+    primary: '#4AA63D',
   },
   screen: {
     xs: '575px',

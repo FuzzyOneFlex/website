@@ -4,7 +4,7 @@ import Scrollspy from 'react-scrollspy';
 import { StaticQuery, graphql } from 'gatsby';
 import { Container } from '@components/global';
 
-import logo from './fuz.svg'
+import logo from './fw.png'
 
 import {
   Nav,
@@ -19,7 +19,7 @@ import {
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 import Img from 'gatsby-image';
 
-const NAV_ITEMS = ['About', 'Roadmap','Team', 'Affiliations', 'FAQ'];
+const NAV_ITEMS = ['Home','About', 'Roadmap','Team', 'Affiliations', 'FAQ'];
 
 class Navbar extends Component {
   state = {
@@ -63,7 +63,7 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <img src={logo} alt="Logo" width="200px" height="80px" />
+          <img src={logo} alt="Logo" width="230px" height="44px" />
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'white' }}>
               <MenuIcon />

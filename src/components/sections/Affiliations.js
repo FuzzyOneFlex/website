@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
-import { Section, Container } from '@components/global';
+import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
-
 import { ReactComponent as AureconLogo } from '@images/logos/aurecon.svg';
-import { ReactComponent as AutocadLogo } from '@images/logos/autocad.svg';
+import { ReactComponent as AutodeskLogo } from '@images/logos/autodesk.svg';
 import { ReactComponent as BoeingLogo } from '@images/logos/boieng.svg';
 import { ReactComponent as BroadspectrumLogo } from '@images/logos/broadspectrum.svg';
 import { ReactComponent as CitibankLogo } from '@images/logos/citibank.svg';
@@ -26,8 +23,8 @@ const LOGOS = [
     link: 'https://www.aurecongroup.com/',
   },
   {
-    logo: AutocadLogo,
-    link: 'https://www.autodesk.com/products/autocad/overview',
+    logo: AutodeskLogo,
+    link: 'https://www.autodesk.com/',
   },
   {
     logo: BoeingLogo,
@@ -36,11 +33,6 @@ const LOGOS = [
   {
     logo: BroadspectrumLogo,
     link: 'https://mobile.broadspectrum.com/',
-  },
-
-    {
-    logo: WhoLogo,
-    link: 'https://www.who.int/',
   },
   {
     logo: CitibankLogo,
@@ -67,12 +59,15 @@ const LOGOS = [
     logo: VentiaLogo,
     link: 'https://www.ventia.com/',
   },
- 
+  {
+    logo: WhoLogo,
+    link: 'https://www.who.int/',
+  },
   {
     logo: GrandLogo,
     link: 'https://www.grantthornton.com/',
   },
-
+ 
 ];
 
  const mystyle = {
@@ -98,13 +93,9 @@ const UsedBy = () => (
         }
       }
     `}
-
-   
-
     render={data => (
-      <Section id="affiliations" accent>
-          
-            <h1 style={mystyle}>Founder's past and present affiliations </h1>
+      <Section3 id="affiliations" accent>
+            <h1 style={mystyle}>Affiliations </h1>
             <LogoGrid>
               {LOGOS.map(({ logo, link }) => (
               <AnimationWrapper>
@@ -114,8 +105,7 @@ const UsedBy = () => (
                 </AnimationWrapper>
               ))}
             </LogoGrid>
-         
-      </Section>
+      </Section3>
     )}
   />
 );
@@ -124,16 +114,18 @@ const UsedBy = () => (
 const LogoGrid = styled.div`
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
-  grid-gap: 30px;
+  grid-gap: 5px;
   justify-items: center;
   align-items: center;
-  padding-right: 50px;
-  padding-left: 50px;
-  margin-bottom: 10px;
-  margin-top: 30px;
+  padding-right: 30px;
+  padding-left:30px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  overflow: visible;
   a {
     svg {
-      width: 100%;
+      width: 70%;
+      height: 70%;
     }
   }
 
@@ -167,6 +159,35 @@ const Art = styled.figure`
   @media (max-width: ${props => props.theme.screen.md}) {
     display: none;
   }
+`;
+
+export const Section3 = styled.section` 
+ overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    padding: 96px 0;
+  }
+
+
+
+  ${props =>
+    props.accent &&
+    `background-color: ${
+      props.accent === 'secondary'
+        ? props.theme.color.black.pitch
+        : props.theme.color.primary
+    }`};
+
+  ${props =>
+    props.accent &&
+    `color: ${
+      props.accent === 'secondary'
+        ? props.theme.color.primary
+        : props.theme.color.white.regular
+    }`};
 `;
 
 export default UsedBy;

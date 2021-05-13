@@ -1,104 +1,61 @@
-import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
-import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
-import { AnimationWrapper } from 'react-hover-animation'
+import React from 'react';
+import ReactRotatingText from 'react-rotating-text';
+import styled from 'styled-components';
+import classes from './BackgroundVideo.module.css';
+import './ReactRotatingText.css';
+import './Header.css';
+import myVideo from './video.mp4';
+
+
 const Header = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_build: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <HeaderWrapper>
-        <Container>
-          <Grid>
-            <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
-            </Art>
-            <Text>
-              <h2><HoverText> Fuzzy.One</HoverText>, a supply chain
-               information platform using Return on Knowledge.</h2>
-             <br />
-             <h3>We pay you for answering questions. 
-              <br />
-              The faster you answer, the more you earn.
-              </h3>
-              <br />
-              <p>
-                <StyledExternalLink href="https://github.com/FuzzyOneFlex">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
-            </Text>
-          </Grid>
-        </Container>
-      </HeaderWrapper>
-    )}
-  />
+<div className={classes.Container} id='home'>
+          <video autoPlay="autoplay" loop="loop" muted className={classes.Video} >
+              <source src={myVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <div className={classes.Content}>
+              <div className={classes.SubContent} >
+              <Intro>Fuzzy.One</Intro> 
+              <br/>
+               <Intro2>A supply chain information platform <br />
+               using Return on Knowledge
+               </Intro2>
+             <br /><br />
+            <h2><ReactRotatingText items={['We pay you for answering questions.', 'The more you know, the more you earn.']} /></h2>
+              </div>
+          </div>
+      </div>
 );
 
-const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
-  padding-top: 96px;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    padding-top: 128px;
-  }
+const Intro = styled.span`
+    margin: 40px auto;
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 4px 7px rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
 `;
 
-const Art = styled.figure`
-  width: 100%;
-  margin: 0;
-
-  > div {
-    width: 120%;
-    margin-bottom: -4.5%;
-
-    @media (max-width: ${props => props.theme.screen.md}) {
-      width: 100%;
-    }
-  }
-`;
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  grid-gap: 64px;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    grid-gap: 80px;
-
-    > ${Art} {
-      order: 2;
-    }
-  }
+const Intro2 = styled.span`
+    margin: 40px auto;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 4px 7px rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+    color: white;
+      font-weight: bold;
 `;
 
 
 
-const Text = styled.div`
-  justify-self: center;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    justify-self: start;
-  }
-`;
 
 const StyledExternalLink = styled(ExternalLink)`
   color: inherit;
@@ -109,10 +66,6 @@ const StyledExternalLink = styled(ExternalLink)`
   }
 `;
 
-const HoverText = styled.span`
-  &:hover {
-    color: ${props => props.theme.color.white.regular};
-  }
-`
+
 
 export default Header;

@@ -12,6 +12,8 @@ import TwitterIcon from '@static/icons/twitter.svg';
 import RedditIcon from '@static/icons/reddit.svg';
 import TelegramIcon from '@static/icons/telegram.svg';
 import LinkedinIcon from '@static/icons/linkedin.svg';
+
+import biglogo from './biglogo.svg';
 import { Section2 } from '@components/global';
 
 const SOCIAL = [
@@ -47,9 +49,9 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_pot: file(
+        logo: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fuz" }
+          name: { eq: "fuz2" }
         ) {
           childImageSharp {
             fluid(maxWidth: 960) {
@@ -60,19 +62,19 @@ const Footer = () => (
       }
     `}
     render={data => (
+      
       <Section2 id="footer" accent="secondary">
-      <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
-          />
-        </Art>
+        
+        <Art><img src={biglogo}/></Art>
         <FooterWrapper>
+          
           <StyledContainer>
+            
             <Copyright>
                 COPYRIGHT © FUZZY.ONE 2021 ALL RIGHTS RESERVED.
+                <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </Copyright>
+            
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
@@ -82,7 +84,6 @@ const Footer = () => (
             </SocialIcons>
           </StyledContainer>
         </FooterWrapper>
-      </React.Fragment>
       </Section2>
     )}
   />
@@ -103,12 +104,11 @@ const SocialIcons = styled.div`
 `;
 
 const FooterWrapper = styled.footer`
-  // background-color: ${props => props.theme.color.primary};
-  // padding: 32px 0;
+  
   padding-top: 120px;
-  // padding-bottom: 1px;
+  padding-bottom: 10px;
   background-image: url("./wave.svg") ;
-  background-size: auto;
+  // background-size: auto;
 `;
 
 const Copyright = styled.div`
@@ -123,10 +123,16 @@ const Copyright = styled.div`
 `;
 
 const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: center;
+margin-left: 800px;
+img {
+ 
+  width: 50%;
+  height: 50%;
+}
 `;
 
 const StyledContainer = styled(Container)`
