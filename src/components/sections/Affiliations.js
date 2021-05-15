@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 import { ReactComponent as AureconLogo } from '@images/logos/aurecon.svg';
 import { ReactComponent as AutodeskLogo } from '@images/logos/autodesk.svg';
@@ -134,32 +133,7 @@ const LogoGrid = styled.div`
   }
 `;
 
-const StyledContainer = styled(Container)`
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-content: center;
-  }
-`;
-
-const Art = styled.figure`
-  width: 600px;
-  position: absolute;
-  top: -12%;
-  right: 50%;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    top: 0;
-    right: 65%;
-    width: 500px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: none;
-  }
-`;
 
 export const Section3 = styled.section` 
  overflow: hidden;

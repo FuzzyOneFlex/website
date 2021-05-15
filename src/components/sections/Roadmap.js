@@ -1,21 +1,57 @@
 import React from 'react';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
  import { Section, Container } from '@components/global';
- 
+ import { Button } from 'react-bootstrap';
 const Roadmap = () => ( 
 <Section id="roadmap" accent="secondary">
   <Container style={{ position: 'relative' }}>
   <h1>Roadmap</h1>
+
 <Timeline lineColor={'#ddd'}>
 
-  <TimelineItem
+    <TimelineItem
     key="001"
-    dateText="May 2021"
     dateInnerStyle={{ 
 
+      background: '#55C645', 
+      fontFamily: 'Courier', 
+      textAlign: 'center' 
+
+    }}
+
+    dateComponent={(
+      <div
+        style={{
+          display: 'block',
+          float: 'right',
+          color: '#fff',
+          fontSize: '25px',
+          marginRight: '30px'
+        }}
+      >
+        06.2021
+      </div>
+    )}
+
+    dateText="06.2021"
+  >
+    <h3 style={{ color: '#55C645' }}>Create the new FUZ token</h3>
+    <p style={{ color: '#ffffff' }}>
+    The new token is based on the Solana Blockchain. It will have 
+    a total supply of 10 million tokens at 8 decimal places.
+    </p>
+  </TimelineItem>
+
+
+
+  <TimelineItem
+    key="002"
+     dateInnerStyle={{ 
+
     background: '#55C645', 
+    fontFamily: 'Courier', 
     textAlign: 'center' 
-    
+
   }}
   dateComponent={(
     <div
@@ -24,68 +60,25 @@ const Roadmap = () => (
         float: 'right',
         color: '#fff',
         fontSize: '25px',
-        marginRight: '50px'
+        marginRight: '30px'
       }}
     >
-      May 2021
+       07.2021
     </div>
   )}
-
-   bodyContainerStyle={{
-      display:'block',
-      background: '#ddd',
-      padding: '20px',
-      borderRadius: '8px',
-      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
-    }}
-    style={{ color: '#55C645' }}
+  dateText=" 07.2021"
   >
-    <h3 style={{ color: '#55C645' }}>Create FUZ Token</h3>
-    <h4>Solana Network Token</h4>
-    <p>
-     Add the new token and initial dApps and blablabla
+    <h3 style={{ color: '#55C645' }}>Exchange old FLEx with FUZ</h3>
+    <p style={{ color: '#ffffff' }} >
+    We will enable FLEx users to exchange their FLEx tokens with FUZ tokens
+    at an exchange rate of 1,000 FLEx to 1 FUZ. The tokens will be staked
+    for 3 months after exchange.
     </p>
+
   </TimelineItem>
+  
 
-
-
-
-  <TimelineItem
-    key="002"
-    dateText="June 2021"
-
-    dateInnerStyle={{ 
-
-    background: '#55C645', 
-    fontFamily: 'Courier', 
-    textAlign: 'center' 
-
-    }}
-    dateComponent={(
-      <div
-        style={{
-          display: 'block',
-          float: 'right',
-          color: '#fff',
-          fontSize: '25px',
-          marginRight: '50px'
-        }}
-      >
-        June 2021
-      </div>
-    )}
-  >
-    <h3 style={{ color: '#55C645' }}>Add the registration module</h3>
-    <h4 style={{ color: '#999999' }} >Subtitle</h4>
-    <p style={{ color: '#ffffff' }}>
-      something about the registration module. short description.
-    </p>
-  </TimelineItem>
-
-
-
-
-    <TimelineItem
+   <TimelineItem
     key="003"
      dateInnerStyle={{ 
 
@@ -101,19 +94,19 @@ const Roadmap = () => (
         float: 'right',
         color: '#fff',
         fontSize: '25px',
-        marginRight: '50px'
+        marginRight: '30px'
       }}
     >
-      June 2021
+      09.2021
     </div>
   )}
-  dateText="June 2021"
-  
+  dateText="09.2021"
   >
-    <h3 style={{ color: '#55C645' }}>Add the Q&A</h3>
-    <h4 style={{ color: '#999999' }} >Q&A elements</h4>
-    <p style={{ color: '#ffffff' }}>
-      something about the q&a. short description.
+    <h3 style={{ color: '#55C645' }}>Complete the Q&A Module</h3>
+    <p style={{ color: '#ffffff' }} >
+    The Q&A Module is the core of Fuzzy.One. This module includes a fast step
+    wise process that helps the user ask the question leading them to
+    receive the correct answers.
     </p>
   
   </TimelineItem>
@@ -136,27 +129,25 @@ const Roadmap = () => (
         float: 'right',
         color: '#fff',
         fontSize: '25px',
-        marginRight: '50px'
+        marginRight: '30px'
       }}
     >
-      July 2021
+      09.2021
     </div>
   )}
-  dateText="July 2021"
+  dateText="09.2021"
   >
-    <h3 style={{ color: '#55C645' }}>Add the DeFi mechanisms</h3>
-    <h4 style={{ color: '#999999' }} >Staking, Farming, Swapping</h4>
+    <h3 style={{ color: '#55C645' }}>Integrate the Wallet</h3>
     <p style={{ color: '#ffffff' }} >
-      something about the defi mechanisms. short description. short description. short description. short description. short description. short description. short description. 
-    </p>
+    We are creating a simple Solana based wallet.
+    It will be a simple Solana wallet which will enable registered
+    users to transfer the tokens out of the site wallet and into a private wallet.  
+      </p>
   
   </TimelineItem>
   
 
-
-
-
-   <TimelineItem
+  <TimelineItem
     key="005"
      dateInnerStyle={{ 
 
@@ -172,52 +163,57 @@ const Roadmap = () => (
         float: 'right',
         color: '#fff',
         fontSize: '25px',
-        marginRight: '50px'
+        marginRight: '30px'
       }}
     >
-      August 2021
+      09.2021
     </div>
   )}
-  dateText="August 2021"
+  dateText="October 2021"
   >
-    <h3 style={{ color: '#55C645' }}>Add the Fuzzy Logic</h3>
-    <h4 style={{ color: '#999999' }} >Fuzzy logic</h4>
+    <h3 style={{ color: '#55C645' }}>Integrate the DeFi dApps</h3>
     <p style={{ color: '#ffffff' }} >
-      something about the fuzzylogic. short description.short description. short description. short description. short description. short description. short description. short description. short description. short description. short description. short description. 
+    We will create a number of blockchain based DeFi solutions to provide
+    a comprehensive suite of cryptocurrency apps.
     </p>
   
   </TimelineItem>
 
-  <TimelineItem
-    key="006"
-     dateInnerStyle={{ 
+    <TimelineItem
+      key="006"
+      dateInnerStyle={{ 
 
-    background: '#55C645', 
-    fontFamily: 'Courier', 
-    textAlign: 'center' 
+      background: '#55C645', 
+      fontFamily: 'Courier', 
+      textAlign: 'center' 
 
-  }}
-  dateComponent={(
-    <div
-      style={{
-        display: 'block',
-        float: 'right',
-        color: '#fff',
-        fontSize: '25px',
-        marginRight: '50px'
-      }}
+    }}
+    dateComponent={(
+      <div
+        style={{
+          display: 'block',
+          float: 'right',
+          color: '#fff',
+          fontSize: '25px',
+          marginRight: '30px'
+        }}
+      >
+        09.2021
+      </div>
+    )}
+    dateText="October 2021"
     >
-      September 2021
-    </div>
-  )}
-  dateText="September 2021"
-  >
-    <h3 style={{ color: '#55C645' }}>Full roll out</h3>
-  
-  
-  </TimelineItem>
-
+      <h3 style={{ color: '#55C645' }}>Complete the ML/AI search engine</h3>
+      <p style={{ color: '#ffffff' }} >
+      The Q&A library combined with the article repository will be searchable
+      via a unique fuzzy logic-based AI. Together with ML algorithms, the
+      search engine will speed up the accuracy for finding answers to questions
+      that are like the ones being asked.
+        </p>
+    
+    </TimelineItem>
 </Timeline>
+
 </Container>
 </Section>
 );

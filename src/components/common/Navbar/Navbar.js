@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-import { StaticQuery, graphql } from 'gatsby';
 import { Container } from '@components/global';
-
-import logo from './fw.png'
+import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+import logo from '../../../images/art/biglogo.png'
 
 import {
   Nav,
   NavItem,
-  Brand,
   StyledContainer,
   NavListWrapper,
   MobileMenu,
   Mobile,
 } from './style';
 
-import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
-import Img from 'gatsby-image';
+
+
 
 const NAV_ITEMS = ['Home','About', 'Roadmap','Team', 'Affiliations', 'FAQ'];
 

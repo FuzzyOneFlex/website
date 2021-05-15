@@ -101,7 +101,7 @@ class Card2 extends React.Component {
           }}>
               <div class="inner">
                 <p>Executive Team</p>
-                <span>We are the chairmans</span>
+                <span>We are the directors</span>
               </div>
             </div>
             <div class="back">

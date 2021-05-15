@@ -27,6 +27,7 @@ const theme = {
     },
 
     primary: '#4AA63D',
+    light: "#55C645"
   },
   screen: {
     xs: '575px',
