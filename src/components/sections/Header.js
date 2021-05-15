@@ -6,12 +6,12 @@ import './Header.css';
 import myVideo from '../../images/art/video.mp4';
 import useWindowDimensions from '@components/common/Dimensions.js'
 
-
 const Header = () => {
   
   const { height, width } = useWindowDimensions();
+  
     return (
-    <div className={classes.Container} id='home' style={{maxWidth: {width}, maxHeight: {height}, position: "relative"}}>
+    <div className={classes.Container} id='home' style={{maxWidth: {width}, height:{height}, position: "relative"}}>
         
             <video autoPlay="autoplay" loop="loop" muted className={classes.Video}>
             <source src={myVideo} type="video/mp4" />
@@ -24,7 +24,7 @@ const Header = () => {
                   <Intro2>A supply chain information platform <br /> using Return on Knowledge</Intro2>
                   <br/><br/>
                 
-                  <h2><ReactRotatingText items={['We pay you for answering questions.', 'The more you know, the more you earn.']} /></h2>
+                  <Rotate><ReactRotatingText items={['We pay you for answering questions.', 'The more you know, the more you earn.']}/></Rotate>
                 </div>
             </div>
     </div>
@@ -45,8 +45,12 @@ const Intro = styled.span`
   font-weight: bold;
   margin-bottom: 40px;
   @media (max-width: ${props => props.theme.screen.md}) {
-    font-size: 20px;
-    padding: 96px 0;
+    font-size: 50px;
+    // padding: 96px 0;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    font-size: 30px;
+    // padding: 96px 0;
   }
 `;
 
@@ -64,8 +68,33 @@ const Intro2 = styled.span`
     @media (max-width: ${props => props.theme.screen.md}) {
       font-size: 20px;
     }
+    @media (max-width: ${props => props.theme.screen.sm}) { 
+      margin: 0px;
+      font-size: 15px;
+      // padding: 96px 0;
+    }
 `;
 
+const Rotate = styled.span`
+  margin: 40px auto;
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 5px;
+  // text-shadow: 3px 4px 7px rgba(0,0,0,0.8);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -1px;
+  color: white;
+  // font-weight: bold;
+    @media (max-width: ${props => props.theme.screen.md}) {
+      font-size: 20px;
+    }
+    @media (max-width: ${props => props.theme.screen.sm}) { 
+      margin: 0px;
+      font-size: 15px;
+      // padding: 96px 0;
+    }
+`;
 
 
 

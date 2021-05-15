@@ -98,6 +98,17 @@ const About = () => (
             }
           }
         }
+
+        fuz: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "fuz300" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 700, maxHeight: 700) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
       }
     `}
 
@@ -110,13 +121,10 @@ const About = () => (
             <div>
              <h2 style={{color: "#55C645"}}>Q&A Platform</h2>
               <p style={{color:"white"}}>
-              We break down the language barrier; you can ask and answer
-              every question in your own language. We provide focus; our
-              system breaks down this issue by using internal fuzzy logic
-              and focusing on helping people on how to ask. We provide an urgency
-              selector, where the requestor selects how fast they want the response.
-              We pay for the answers; every answer gets paid a base rate. Urgent
-              questions create a bonus.  
+              Get quick fixes to everyday supply chain problems in your
+               own language now. The solution-writer could be a truck driver,
+                a supplier, a garage owner, a delivery person, a retail importer,
+                 a tax specialist, and the list goes on.  
               </p>
             </div>
             <Art>
@@ -131,10 +139,12 @@ const About = () => (
             <div>
               <h2 style={{color: "#55C645"}}>Solution Repository</h2>
               <p style={{color:"white"}}>
-              A global solution repository comprised of informative and knowledge-oriented
-              articles written with experience. An indexed searchable library
-              of pre-validated solutions, designed to solve similar and unique issues. 
-              Validated solutions with quantifiable outcomes. 
+              An indexed searchable library of pre-validated solutions and articles, 
+              designed to solve similar and unique issues in supply chain. The articles
+               in this library contain years of mind-numbing wisdom squeezed into a 
+               few paragraphs of validated solutions with quantifiable outcomes. 
+               The writers are rewarded in crypto, based on several factors
+                including the relevance of their articles.
               </p>
             </div>
           </Grid><br/>
@@ -143,8 +153,9 @@ const About = () => (
             <div>
               <h2 style={{color: "#55C645"}}>Fuzzy Mall</h2>
               <p style={{color:"white"}}>
-              Global online marketplace for Supply Chain companies
-              & service providers to connect and execute smooth trade with each other.
+              An online marketplace for supply chain companies and service providers
+               worldwide to connect and execute smooth trade with each other. Now relax
+                and let us manage your trade-status hassles.
               <br/>
               </p>
             </div>
@@ -155,14 +166,17 @@ const About = () => (
           
           <Grid inverse>
             <Art>
-              <Img fluid={data.solana.childImageSharp.fluid} />
+            <Img fluid={data.fuz.childImageSharp.fluid} />
+            <Img fluid={data.solana.childImageSharp.fluid} />
+              
             </Art>
             <div>
-              <h2 style={{color: "#55C645"}}>Solana Blockchain</h2>
+              <h2 style={{color: "#55C645"}}>FUZ Token</h2>
               <p style={{color:"white"}}>
-              Solana is a fast, secure, and censorship-resistant blockchain. <br/>
-              It is also an easy blockchain to link up to and will provide an
-              inexpensive, fast and secure environment for our global community.
+              FUZ Token will be build on Solana. Solana is a fast, secure,
+              and censorship-resistant blockchain. It is also an easy blockchain
+              to link up and provide an inexpensive, fast and secure 
+              environment for our global community.
               </p>
             </div>
           </Grid>
@@ -176,7 +190,7 @@ const About = () => (
             <div>
               <h2 >Break down the language barrier</h2>
               <p style={{color:"black"}}>
-              We enable everyone to post Q&As in their language so that localized
+              We enable everyone to post Q&A's in their language so that localized
               professionals can respond in the same language, removing the English
               barrier that predominate the internet.
               </p>

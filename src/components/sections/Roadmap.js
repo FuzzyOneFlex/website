@@ -1,12 +1,17 @@
 import React from 'react';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
  import { Section, Container } from '@components/global';
- import { Button } from 'react-bootstrap';
+ import IconButton from '@material-ui/core/IconButton';
+ import AttachFileIcon from '@material-ui/icons/AttachFile';
+ import pdf from '../../images/roadmap.pdf'
+ import './Roadmap.css'
+ 
 const Roadmap = () => ( 
 <Section id="roadmap" accent="secondary">
   <Container style={{ position: 'relative' }}>
-  <h1>Roadmap</h1>
-
+  <h1>Roadmap  <IconButton><a style={{ color:'#4AA63D'}} component="span" fontSize="large" href={pdf} target = "_blank" rel="noreferrer"> <AttachFileIcon /></a> </IconButton></h1> 
+ 
+  
 <Timeline lineColor={'#ddd'}>
 
     <TimelineItem
@@ -63,10 +68,10 @@ const Roadmap = () => (
         marginRight: '30px'
       }}
     >
-       07.2021
+       06.2021
     </div>
   )}
-  dateText=" 07.2021"
+  dateText=" 06.2021"
   >
     <h3 style={{ color: '#55C645' }}>Exchange old FLEx with FUZ</h3>
     <p style={{ color: '#ffffff' }} >
@@ -97,10 +102,10 @@ const Roadmap = () => (
         marginRight: '30px'
       }}
     >
-      09.2021
+      07.2021
     </div>
   )}
-  dateText="09.2021"
+  dateText="07.2021"
   >
     <h3 style={{ color: '#55C645' }}>Complete the Q&A Module</h3>
     <p style={{ color: '#ffffff' }} >
@@ -132,10 +137,10 @@ const Roadmap = () => (
         marginRight: '30px'
       }}
     >
-      09.2021
+      07.2021
     </div>
   )}
-  dateText="09.2021"
+  dateText="07.2021"
   >
     <h3 style={{ color: '#55C645' }}>Integrate the Wallet</h3>
     <p style={{ color: '#ffffff' }} >
@@ -166,10 +171,10 @@ const Roadmap = () => (
         marginRight: '30px'
       }}
     >
-      09.2021
+      08.2021
     </div>
   )}
-  dateText="October 2021"
+  dateText="08.2021"
   >
     <h3 style={{ color: '#55C645' }}>Integrate the DeFi dApps</h3>
     <p style={{ color: '#ffffff' }} >
@@ -201,7 +206,7 @@ const Roadmap = () => (
         09.2021
       </div>
     )}
-    dateText="October 2021"
+    dateText="09.2021"
     >
       <h3 style={{ color: '#55C645' }}>Complete the ML/AI search engine</h3>
       <p style={{ color: '#ffffff' }} >
@@ -215,6 +220,8 @@ const Roadmap = () => (
 </Timeline>
 
 </Container>
+
 </Section>
+
 );
 export default Roadmap;

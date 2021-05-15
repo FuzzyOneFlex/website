@@ -90,10 +90,10 @@ const COMMUNITY = [
 class Card2 extends React.Component {
   render() {
     return(
+      
   <div class="wrapper">
     <div class="cols">
-        
-        
+
         <div class="col" ontouchstart="this.classList.toggle('hover');">
           <div class="container">
             <div class="front" style={{ 
@@ -217,14 +217,13 @@ const TeamGrid = styled.div`
   display: grid;
   
   grid-template-columns: 2fr 2fr;
-  grid-gap: 3px;
+  grid-gap: 4px;
   justify-items: center;
   align-items: center;
-  padding-right: 5px;
-  padding-left: 5px;
+
   margin-bottom: 0px;
   margin-top: 0px;
-  overflow: visible;
+  overflow: hidden;
   a {
     svg {
       width: 80%;
@@ -235,7 +234,14 @@ const TeamGrid = styled.div`
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
-    grid-template-columns: 1fr;
+    a {
+      svg {
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
   }
 `;
 

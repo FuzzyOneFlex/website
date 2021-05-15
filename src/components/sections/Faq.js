@@ -2,7 +2,6 @@ import React from 'react';
 import { Section, Container } from '@components/global';
 import FaqItem from '@common/FaqItem';
 
-
 const FAQS = [
   {
     title: 'What is the problem we are trying to solve?',

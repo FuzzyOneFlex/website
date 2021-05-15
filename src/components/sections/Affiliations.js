@@ -117,7 +117,7 @@ const LogoGrid = styled.div`
   justify-items: center;
   align-items: center;
   padding-right: 30px;
-  padding-left:30px;
+  padding-left: 30px;
   margin-bottom: 0px;
   margin-top: 20px;
   overflow: visible;
@@ -129,7 +129,16 @@ const LogoGrid = styled.div`
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
-    grid-template-columns: 1fr;
+    align-items: left;
+    padding-right: 0px;
+    // padding-left: 60px;
+    grid-template-columns: 4fr 4fr 4fr;
+    a {
+      svg {
+        width: 70%;
+        height: 70%;
+      }
+    }
   }
 `;
 

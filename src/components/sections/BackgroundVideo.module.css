@@ -1,6 +1,5 @@
 .Container {
     position: relative;
-    min-height: 300px;
     max-height: 1200px;
     overflow: hidden;
     
