@@ -4,14 +4,12 @@ import styled from 'styled-components';
 import classes from './BackgroundVideo.module.css';
 import './Header.css';
 import myVideo from '../../images/art/video.mp4';
-import useWindowDimensions from '@components/common/Dimensions.js'
 
 const Header = () => {
   
-  const { height, width } = useWindowDimensions();
   
     return (
-    <div className={classes.Container} id='home' style={{maxWidth: {width}, height:{height}, position: "relative"}}>
+    <div className={classes.Container} id='home'>
         
             <video autoPlay="autoplay" loop="loop" muted className={classes.Video}>
             <source src={myVideo} type="video/mp4" />
