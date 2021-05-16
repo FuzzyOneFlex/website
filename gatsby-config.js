@@ -54,6 +54,6 @@ module.exports = {
         },
       },
     },
-      `gatsby-plugin-htaccess-redirect`
+      `gatsby-plugin-htaccess`,
   ],
 };
