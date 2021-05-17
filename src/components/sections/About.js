@@ -190,7 +190,7 @@ const About = () => (
          <h1>Why use Fuzzy.One</h1>
          <Grid>
             <div>
-              <h2 >We break down the language barrier</h2>
+              <h2 >We break down the Language barrier</h2>
               <p style={{color:"black"}}>
               We enable everyone to post Q&A's in their language so that localized
               professionals can respond in the same language, removing the English
@@ -207,7 +207,7 @@ const About = () => (
              <Img fluid={data.bitcoin.childImageSharp.fluid} />
            </Art>
            <div>
-             <h2>We break down the cryptocurrency barrier</h2>
+             <h2>We break down the Cryptocurrency barrier</h2>
               <p style={{color:"black"}}>
               We use cryptocurrency as an intermediary payment form, where rewards
               are paid for in full, and the users can then convert or exchange 
@@ -219,7 +219,7 @@ const About = () => (
          
          <Grid>
            <div>
-             <h2>We break down the Globalization Barriers</h2>
+             <h2>We break down the Globalization barrier</h2>
               <p style={{color:"black"}}>
               Offering localised Q&As. In other words, you do not need to ask
               a question that is not focused on your location. If you need help

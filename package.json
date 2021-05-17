@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-absurd",
+  "name": "fuzzy.one",
   "private": true,
-  "description": "An absurd starter for Gatsby",
+  "description": "The official fuzzy.one website",
   "version": "0.1.0",
-  "author": "Ajay NS <ajay.ns@outlook.com>",
+  "author": "gg",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",

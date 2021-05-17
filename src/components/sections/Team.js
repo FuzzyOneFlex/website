@@ -9,6 +9,7 @@ import { ReactComponent as sameer } from '@images/logos/people/sameer.svg';
 import { ReactComponent as mohan } from '@images/logos/people/mohan.svg';
 import { ReactComponent as giorgos } from '@images/logos/people/giorgos.svg';
 import { ReactComponent as nechesov } from '@images/logos/people/nechesov.svg';
+import { ReactComponent as chanchal } from '@images/logos/people/chanchal.svg';
 import { ReactComponent as nitin } from '@images/logos/people/nitin.svg';
 import { ReactComponent as mushtaq } from '@images/logos/people/mushtaq.svg';
 import { ReactComponent as marjorie } from '@images/logos/people/marjorie.svg';
@@ -46,6 +47,10 @@ const DEV = [
   {
     logo: mushtaq,
     link: 'https://www.linkedin.com/in/mushtaqnaik/',
+  },
+  {
+    logo: chanchal,
+    link: 'https://https://www.linkedin.com/in/nechesov/',
   },
   {
     logo: nechesov,
