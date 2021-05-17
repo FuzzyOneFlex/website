@@ -125,7 +125,8 @@ const About = () => (
               Get quick fixes to everyday supply chain problems in your
                own language now. The solution-writer could be a truck driver,
                 a supplier, a garage owner, a delivery person, a retail importer,
-                 a tax specialist, and the list goes on.  
+                 a tax specialist, and the list goes on. We pay for the Answers; 
+                  Every answer gets paid a base rate. Urgent questions create a bonus.   
               </p>
             </div>
             <Art>
@@ -189,7 +190,7 @@ const About = () => (
          <h1>Why use Fuzzy.One</h1>
          <Grid>
             <div>
-              <h2 >Break down the language barrier</h2>
+              <h2 >We break down the language barrier</h2>
               <p style={{color:"black"}}>
               We enable everyone to post Q&A's in their language so that localized
               professionals can respond in the same language, removing the English
@@ -206,7 +207,7 @@ const About = () => (
              <Img fluid={data.bitcoin.childImageSharp.fluid} />
            </Art>
            <div>
-             <h2>Break down the cryptocurrency barrier</h2>
+             <h2>We break down the cryptocurrency barrier</h2>
               <p style={{color:"black"}}>
               We use cryptocurrency as an intermediary payment form, where rewards
               are paid for in full, and the users can then convert or exchange 
@@ -218,7 +219,7 @@ const About = () => (
          
          <Grid>
            <div>
-             <h2>Break down the Globalization Barriers</h2>
+             <h2>We break down the Globalization Barriers</h2>
               <p style={{color:"black"}}>
               Offering localised Q&As. In other words, you do not need to ask
               a question that is not focused on your location. If you need help
@@ -238,7 +239,7 @@ const About = () => (
              <Img fluid={data.productivity.childImageSharp.fluid} />
            </Art>
            <div>
-            <h2>Break down the Urgency & Quality barrier</h2>
+            <h2>We break down the Urgency & Quality barrier</h2>
             <p style={{color:"black"}}>
             One of the biggest issues is knowing how to ask. Our system breaks down this
             issue by using internal fuzzy logic and focusing on helping people on how to ask.
