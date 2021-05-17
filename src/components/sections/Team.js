@@ -5,8 +5,8 @@ import "./card.css"
 
 
 import { ReactComponent as ian } from '@images/logos/people/ian.svg';
-import { ReactComponent as mohan } from '@images/logos/people/mohan.svg';
 import { ReactComponent as sameer } from '@images/logos/people/sameer.svg';
+import { ReactComponent as mohan } from '@images/logos/people/mohan.svg';
 import { ReactComponent as giorgos } from '@images/logos/people/giorgos.svg';
 import { ReactComponent as nechesov } from '@images/logos/people/nechesov.svg';
 import { ReactComponent as nitin } from '@images/logos/people/nitin.svg';
@@ -27,15 +27,15 @@ const EXEC = [
     logo: ian,
     link: 'https://www.linkedin.com/in/iankano/',
   },
+   {
+    logo: sameer,
+    link: 'https://www.linkedin.com/in/sameer-bakhru-cfa-b8b213138/',
+  },
   {
     logo: mohan,
     link: 'https://www.linkedin.com/in/mohan-devsam-2b25b070/',
   },
-  {
-    logo: sameer,
-    link: 'https://www.linkedin.com/in/sameer-bakhru-cfa-b8b213138/',
-  },
-
+ 
 ];
 
 const DEV = [
@@ -49,7 +49,7 @@ const DEV = [
   },
   {
     logo: nechesov,
-    link: 'https://www.linkedin.com/in/mohan-devsam-2b25b070/',
+    link: 'https://https://www.linkedin.com/in/nechesov/',
   },
   {
     logo: nitin,
