@@ -50,11 +50,11 @@ const DEV = [
   },
   {
     logo: chanchal,
-    link: 'https://https://www.linkedin.com/in/nechesov/',
+    link: 'https://fuzzy.one',
   },
   {
     logo: nechesov,
-    link: 'https://https://www.linkedin.com/in/nechesov/',
+    link: 'https://www.linkedin.com/in/nechesov/',
   },
   {
     logo: nitin,
@@ -96,21 +96,21 @@ class Card2 extends React.Component {
   render() {
     return(
       
-  <div class="wrapper">
-    <div class="cols">
+  <div className="wrapper">
+    <div className="cols">
 
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style={{ 
+        <div className="col" ontouchstart="this.classList.toggle('hover');">
+          <div className="container">
+            <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` 
           }}>
-              <div class="inner">
+              <div className="inner">
                 <p>Executive Team</p>
                 <span>We are the directors</span>
               </div>
             </div>
-            <div class="back">
-              <div class="inner">
+            <div className="back">
+              <div className="inner">
               <TeamGrid>
               {EXEC.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link} target={"_blank"}>
@@ -123,18 +123,18 @@ class Card2 extends React.Component {
           </div>
         </div>
         
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style={{ 
+        <div className="col" ontouchstart="this.classList.toggle('hover');">
+          <div className="container">
+            <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")` 
           }}>
-              <div class="inner">
+              <div className="inner">
                 <p>Developer Team</p>
                 <span>We are the builders</span>
               </div>
             </div>
-            <div class="back">
-              <div class="inner">
+            <div className="back">
+              <div className="inner">
               <TeamGrid>
               {DEV.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link} target={"_blank"}>
@@ -147,18 +147,18 @@ class Card2 extends React.Component {
           </div>
         </div>
 
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style={{ 
+        <div className="col" ontouchstart="this.classList.toggle('hover');">
+          <div className="container">
+            <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/828764/pexels-photo-828764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` 
           }}>
-              <div class="inner">
+              <div className="inner">
                 <p>Academic Team</p>
                 <span>We are the thinkers</span>
               </div>
             </div>
-            <div class="back">
-              <div class="inner">
+            <div className="back">
+              <div className="inner">
               <TeamGrid>
               {ACADEMIC.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link} target={"_blank"}>
@@ -171,18 +171,18 @@ class Card2 extends React.Component {
           </div>
         </div>
 
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style={{ 
+        <div className="col" ontouchstart="this.classList.toggle('hover');">
+          <div className="container">
+            <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/209728/pexels-photo-209728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` 
           }}>
-              <div class="inner">
+              <div className="inner">
                 <p>Community Team</p>
                 <span>We are the supporters</span>
               </div>
             </div>
-            <div class="back">
-              <div class="inner">
+            <div className="back">
+              <div className="inner">
               <TeamGrid>
               {COMMUNITY.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link} target={"_blank"}>

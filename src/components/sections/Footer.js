@@ -9,10 +9,14 @@ import TwitterIcon from '@static/icons/twitter.svg';
 import RedditIcon from '@static/icons/reddit.svg';
 import TelegramIcon from '@static/icons/telegram.svg';
 import LinkedinIcon from '@static/icons/linkedin.svg';
+import MailIcon from '@static/icons/mail.svg';
 import Wave from 'react-wavify'
 
-
 const SOCIAL = [
+  {
+    icon: MailIcon,
+    link: 'mailto:admin@fuzzy.one',
+  },
   {
     icon: TwitterIcon,
     link: 'https://twitter.com/FuzzyOne10',
@@ -109,7 +113,6 @@ const Footer = () => (
                 COPYRIGHT © FUZZY.ONE 2021 ALL RIGHTS RESERVED.
                 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </Copyright>
-            
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
