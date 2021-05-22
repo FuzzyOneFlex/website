@@ -99,7 +99,7 @@ class Card2 extends React.Component {
   <div className="wrapper">
     <div className="cols">
 
-        <div className="col" ontouchstart="this.classList.toggle('hover');">
+        <div className="col">
           <div className="container">
             <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` 
@@ -123,7 +123,7 @@ class Card2 extends React.Component {
           </div>
         </div>
         
-        <div className="col" ontouchstart="this.classList.toggle('hover');">
+        <div className="col" >
           <div className="container">
             <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")` 
@@ -147,7 +147,7 @@ class Card2 extends React.Component {
           </div>
         </div>
 
-        <div className="col" ontouchstart="this.classList.toggle('hover');">
+        <div className="col" >
           <div className="container">
             <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/828764/pexels-photo-828764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` 
@@ -171,7 +171,7 @@ class Card2 extends React.Component {
           </div>
         </div>
 
-        <div className="col" ontouchstart="this.classList.toggle('hover');">
+        <div className="col" >
           <div className="container">
             <div className="front" style={{ 
             backgroundImage: `url("https://images.pexels.com/photos/209728/pexels-photo-209728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` 
@@ -239,15 +239,29 @@ const TeamGrid = styled.div`
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-gap: 15px;
     a {
       svg {
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         display: inline-block;
       }
     }
   }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-gap: 15px;
+    a {
+      svg {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+  }
+
+  
 `;
 
 export default App;

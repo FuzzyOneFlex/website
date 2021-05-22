@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
 import ExternalLink from '@common/ExternalLink';
 import { ReactComponent as AureconLogo } from '@images/logos/aurecon.svg';
 import { ReactComponent as AutodeskLogo } from '@images/logos/autodesk.svg';
@@ -76,37 +75,20 @@ const LOGOS = [
       marginTop: "-40px"
     };
 
-const UsedBy = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_story: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "tell_story" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 2400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
+const UsedBy = () =>  (
       <Section3 id="affiliations" accent>
             <h1 style={mystyle}>Affiliations </h1>
             <LogoGrid>
               {LOGOS.map(({ logo, link }) => (
-              <AnimationWrapper>
+              <AnimationWrapper key={link}>
                 <ExternalLink key={link} href={link} target={"_blank"}>
                   {logo()}
                 </ExternalLink>
-                </AnimationWrapper>
+                </AnimationWrapper >
               ))}
             </LogoGrid>
       </Section3>
-    )}
-  />
+  
 );
 
 

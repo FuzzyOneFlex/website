@@ -5,6 +5,10 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
+  float: center;
+  @media (min-width: ${props => props.theme.screen.xxs}) {
+    max-width: 350px;
+  }
 
   @media (min-width: ${props => props.theme.screen.xs}) {
     max-width: 540px;
@@ -37,6 +41,7 @@ export const Section = styled.section`
     padding: 96px 0;
   }
 
+  
 
 
   ${props =>

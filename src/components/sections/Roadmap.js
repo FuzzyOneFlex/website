@@ -5,13 +5,13 @@ import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
  import AttachFileIcon from '@material-ui/icons/AttachFile';
  import pdf from '../../images/roadmap.pdf'
  import './Roadmap.css'
- 
+  // import { RenderBlogs } from './Widget.js';
 const Roadmap = () => ( 
 <Section id="roadmap" accent="secondary">
   <Container style={{ position: 'relative' }}>
   <h1>Roadmap  <IconButton><a style={{ color:'#4AA63D'}} component="span" fontSize="large" href={pdf} target = "_blank" rel="noreferrer"> <AttachFileIcon /></a> </IconButton></h1> 
  
-  
+  {/* <RenderBlogs></RenderBlogs> */}
 <Timeline lineColor={'#ddd'}>
 
     <TimelineItem

@@ -10,6 +10,7 @@ import RedditIcon from '@static/icons/reddit.svg';
 import TelegramIcon from '@static/icons/telegram.svg';
 import LinkedinIcon from '@static/icons/linkedin.svg';
 import MailIcon from '@static/icons/mail.svg';
+import MediumIcon from '@static/icons/medium.svg';
 import Wave from 'react-wavify'
 
 const SOCIAL = [
@@ -20,6 +21,10 @@ const SOCIAL = [
   {
     icon: TwitterIcon,
     link: 'https://twitter.com/FuzzyOne10',
+  },
+  {
+    icon: MediumIcon,
+    link: 'https://fuzzy-one.medium.com/',
   },
   {
     icon: RedditIcon,
@@ -66,9 +71,9 @@ const Footer = () => (
       <Section3 id="footer3" accent="secondary">
         <Wave style={{height:"500px", paddingTop:"30px"}} fill="#4AA63D" mask="url(#mask)" 
         options={{ 
-          points: 3000, 
+          points: 5, 
           speed: 0.2, 
-          amplitude: 400, 
+          amplitude: 300, 
           height: 0}}>
           <mask id="mask" >
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"

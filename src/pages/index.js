@@ -7,6 +7,7 @@ import Header from '@sections/Header';
 import About from '@sections/About';
 import Affiliations from '@sections/Affiliations';
 import Team from '@sections/Team';
+import Widget from '@sections/Widget';
 import Roadmap from '@sections/Roadmap';
 import Faq from '@sections/Faq';
 import Footer from '@sections/Footer';
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <About />
     <Roadmap />
     <Team />
+    <Widget />
     <Affiliations />
     <Faq />
     <Footer />

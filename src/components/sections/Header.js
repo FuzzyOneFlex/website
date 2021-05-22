@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import classes from './BackgroundVideo.module.css';
 import './Header.css';
 import myVideo from '../../images/art/video.mp4';
-
+import { Section, Container } from '@components/global';
 const Header = () => {
   
   
     return (
-    <div className={classes.Container} id='home'>
-        
+      
+    <div className={classes.Container2} id='home'>
             <video autoPlay="autoplay" loop="loop" muted className={classes.Video}>
             <source src={myVideo} type="video/mp4" />
             </video>
@@ -43,9 +43,14 @@ const Intro = styled.span`
   font-weight: bold;
   margin-bottom: 40px;
   @media (max-width: ${props => props.theme.screen.md}) {
-    font-size: 50px;
+    font-size: 40px;
     // padding: 96px 0;
   }
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    font-size: 40px;
+    // padding: 96px 0;
+  }
+
   @media (max-width: ${props => props.theme.screen.sm}) {
     font-size: 30px;
     // padding: 96px 0;
@@ -64,8 +69,13 @@ const Intro2 = styled.span`
   color: white;
   font-weight: bold;
     @media (max-width: ${props => props.theme.screen.md}) {
-      font-size: 20px;
+      font-size: 18px;
     }
+    @media (max-width: ${props => props.theme.screen.lg}) {
+      font-size: 30px;
+      // padding: 96px 0;
+    }
+
     @media (max-width: ${props => props.theme.screen.sm}) { 
       margin: 0px;
       font-size: 15px;
@@ -85,8 +95,13 @@ const Rotate = styled.span`
   color: white;
   // font-weight: bold;
     @media (max-width: ${props => props.theme.screen.md}) {
-      font-size: 20px;
+      font-size: 18px;
     }
+    @media (max-width: ${props => props.theme.screen.lg}) {
+      font-size: 25px;
+      // padding: 96px 0;
+    }
+
     @media (max-width: ${props => props.theme.screen.sm}) { 
       margin: 0px;
       font-size: 15px;

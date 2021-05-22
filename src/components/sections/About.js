@@ -43,16 +43,6 @@ const About = () => (
           }
         }
     
-        solana: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "solana" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 700, maxHeight: 700) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
     
         lang: file(
           sourceInstanceName: { eq: "art" }
@@ -88,6 +78,7 @@ const About = () => (
           }
         }
 
+
         productivity: file(
           sourceInstanceName: { eq: "art" }
           name: { eq: "productivity" }
@@ -110,6 +101,17 @@ const About = () => (
           }
         }
 
+        fs: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "fuz300" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 700, maxHeight: 700) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
       }
     `}
 
@@ -117,16 +119,16 @@ const About = () => (
       <div id="about">
       <Section id="about1" accent="secondary">
         <Container>
-          <h1>What is Fuzzy.One</h1>
+          <h1 style={{textAlign:"center"}}>What is Fuzzy.One</h1>
           <Grid>
             <div>
              <h2 style={{color: "#55C645"}}>Q&A Platform</h2>
               <p style={{color:"white"}}>
               Get quick fixes to everyday supply chain problems in your
-               own language now. The solution-writer could be a truck driver,
-                a supplier, a garage owner, a delivery person, a retail importer,
-                 a tax specialist, and the list goes on. We pay for the Answers; 
-                  Every answer gets paid a base rate. Urgent questions create a bonus.   
+              own language now. The solution-writer could be a truck driver,
+              a supplier, a garage owner, a delivery person, a retail importer,
+              a tax specialist, and the list goes on. We pay for the answers. 
+              Every answer gets paid a base rate. Urgent questions create a bonus.   
               </p>
             </div>
             <Art>
@@ -167,11 +169,12 @@ const About = () => (
           </Grid><br/>
           
           <Grid inverse>
+            
             <Art>
-            <Img fluid={data.fuz.childImageSharp.fluid} />
-            <Img fluid={data.solana.childImageSharp.fluid} />
-              
+            <Img fluid={data.fs.childImageSharp.fluid}/>
             </Art>
+          
+            
             <div>
               <h2 style={{color: "#55C645"}}>FUZ Token</h2>
               <p style={{color:"white"}}>
@@ -187,7 +190,7 @@ const About = () => (
       </Section>
        <Section id="about2" accent="primary">
        <Container>
-         <h1>Why use Fuzzy.One</h1>
+         <h1 style={{textAlign:"center"}}>Why use Fuzzy.One</h1>
          <Grid>
             <div>
               <h2 >We break down the Language barrier</h2>
@@ -258,44 +261,50 @@ const About = () => (
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-gap: 80px;
-  text-align: right;
+  text-align: left;
   align-items: center;
   justify-items: center;
   margin: 40px 0;
-
+  
   ${props =>
     props.inverse &&
     `
-    text-align: left;
+    text-align: right;
     grid-template-columns: 2fr 3fr;
-  `}
-  h2 {
-    margin-bottom: 16px;
-  }
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
-    ${props =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
+    margin: 0 40px;
     `}
-  }
+
+    h2 {
+      margin-bottom: 16px;
+    }
+
+      @media only screen and (min-width : ${props => props.theme.screen.sm}) {
+        grid-gap: 80px;
+        margin-left: 10px;
+        p { font-size: 20px;}
+        h2 { font-size: 27px;}
+      }
+
+
+    @media only screen and (max-width : ${props => props.theme.screen.sm}) {
+      grid-template-columns: 1fr;
+      grid-gap: 0px;   
+      text-align: center;
+    }
+
 `;
 
 const Art = styled.figure`
-  margin: 0;
-  max-width: 250px;
+  margin: 30px;
+  max-width: 200px;
+  max-height: 200px;
   width: 100%;
+  // display:none;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+   display:none;
+  }
 `;
+
 
 
 export default About;
